@@ -86,3 +86,17 @@ section p {
     line-height: 2;
     color: #444;
 }
+.music-control {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#playBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5d5d5d; /* 跟左邊一樣的深灰色 */
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
