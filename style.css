@@ -1,4 +1,4 @@
-/* 全局設定 */
+/* 讓背景填滿整個畫面 */
 body {
     background-color: #f5f5f5;
     margin: 0;
@@ -6,24 +6,26 @@ body {
     display: flex;
     justify-content: center;
     font-family: "Microsoft JhengHei", sans-serif;
-}
-
-/* 讓容器寬度稍微加大，並確保它是滿的 */
-.resume-container {
-    width: 1000px; /* 增加總寬度 */
-    background: white;
-    display: flex;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
     min-height: 100vh;
 }
 
-/* 左側欄位固定寬度 */
+/* 這是關鍵：把寬度直接設為 100%，或更大的固定寬度 */
+.resume-container {
+    width: 100%;             /* 讓它填滿畫面 */
+    max-width: 1200px;       /* 但最大不要超過 1200px，以免字拉得太長難看 */
+    background: white;
+    display: flex;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin: 20px;            /* 讓四周留一點點小縫隙比較美 */
+}
+
+/* 左側欄：保持固定 300px，不被壓縮 */
 .sidebar {
     width: 300px;
     background-color: #5d5d5d;
     color: white;
     padding: 40px 25px;
-    flex-shrink: 0; /* 防止左邊被壓縮 */
+    flex-shrink: 0;
 }
 
 .profile-img {
@@ -35,37 +37,37 @@ body {
     border: 3px solid white;
 }
 
-/* 右側內容：這是關鍵修正 */
+/* 右側內容：強制填滿剩下空間 */
 .main-content {
-    flex: 1; /* 這行會讓右邊自動填滿剩下的所有空間 */
+    flex-grow: 1;            /* 強力填滿右側 */
     padding: 60px 50px;
     background-color: #fff;
-    text-align: left; /* 確保文字靠左對齊 */
 }
 
-header h1 {
-    font-size: 40px;
-    margin: 0;
-    letter-spacing: 5px;
-}
-
+/* 確保所有標題橫線也拉長 */
 .title-bar {
     border-bottom: 2px solid #5d5d5d;
     margin-top: 40px;
     padding-bottom: 10px;
     font-size: 22px;
+    width: 100%;             /* 讓橫線跑滿整個右側 */
 }
 
-/* 讓列表或段落內容稍微變寬 */
+header h1 {
+    font-size: 45px;
+    margin: 0;
+    letter-spacing: 5px;
+}
+
 section p {
     font-size: 16px;
-    line-height: 1.8;
-    max-width: 100%; /* 確保內容不會被限制在窄框框裡 */
+    line-height: 2;
+    color: #444;
+    word-wrap: break-word;   /* 自動換行 */
 }
 
-/* 音樂按鈕樣式 */
 .music-control {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 #playBtn {
@@ -75,4 +77,5 @@ section p {
     color: white;
     border: 1px solid white;
     cursor: pointer;
+    border-radius: 5px;
 }
