@@ -1,0 +1,87 @@
+/* 基本設定 */
+body {
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+.resume-container {
+    width: 850px;
+    background: white;
+    display: flex; /* 開啟分欄 */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    min-height: 1000px;
+}
+
+/* 左側青色欄 */
+.sidebar {
+    width: 280px;
+    background-color: #e8f3f3; /* 淺青色底 */
+    padding: 40px 25px;
+}
+
+/* 照片大小控制 */
+.profile-img {
+    width: 180px; /* 固定照片寬度 */
+    height: 220px; /* 固定照片高度 */
+    object-fit: cover; /* 確保照片不變形 */
+    border: 5px solid white;
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    background-color: #5aaeb3; /* 青色標題塊 */
+    color: white;
+    padding: 5px 15px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.section p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.8;
+    margin: 5px 0;
+}
+
+/* 右側主要內容 */
+.main-content {
+    flex: 1;
+    padding: 50px 40px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #333;
+    margin: 0;
+    letter-spacing: 5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.title-bar {
+    border-bottom: 2px solid #5aaeb3;
+    color: #5aaeb3;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.item-content {
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
