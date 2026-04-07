@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人履歷</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="resume-container">
+        <div class="sidebar">
+            <img src="profile.jpg" alt="個人照" class="profile-img">
+            <div class="section">
+                <h3>基礎信息</h3>
+                <p>姓名：陳藝方</p>
+                <p>出生年月：2007.03</p>
+                <p>學系：聽力暨語言治療學系</p>
+                <p>學號：114018013</p>
+            </div>
+            <div class="section">
+                <h3>聯繫方式</h3>
+                <p>信箱：yifang9632@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h1>陳藝方</h1>
+                <p class="subtitle">亞洲大學 聽語系</p>
+            </header>
+            
+            <section>
+                <h2 class="title-bar">教育背景</h2>
+                <p>2025.09 -- 至今 | 亞洲大學 | 聽力暨語言治療學系</p>
+            </section>
+
+            <section>
+                <h2 class="title-bar">校內外實踐</h2>
+                <p>2025.10 | 演習組活動參與</p>
+                <p>2024.04 -- 2025.08 | 兼職經驗</p>
+            </section>
+
+            <section>
+                <h2 class="title-bar">自我評價</h2>
+                <p>具備聽能復健、語音科學等基礎知識，並熱衷於網頁開發與數位化應用。</p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // 嘗試自動播放音樂（部分瀏覽器會攔截，需使用者點擊網頁後啟動）
+        window.addEventListener('click', () => {
+            const audio = document.getElementById('bgMusic');
+            audio.play();
+        }, { once: true });
+    </script>
+</body>
+</html>
