@@ -1,87 +1,88 @@
-/* 基本設定 */
+/* 讓整個網頁置中，背景帶一點淺灰色 */
 body {
-    background-color: #f4f7f6;
+    background-color: #f5f5f5;
     margin: 0;
-    padding: 40px 0;
+    padding: 30px 0;
     display: flex;
     justify-content: center;
     font-family: "Microsoft JhengHei", sans-serif;
 }
 
+/* 這是外層容器，開啟 flex 讓它變左右兩欄 */
 .resume-container {
-    width: 850px;
+    width: 900px;
     background: white;
-    display: flex; /* 開啟分欄 */
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    display: flex; /* 關鍵：讓左側 sidebar 和右側 main-content 並排 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     min-height: 1000px;
 }
 
-/* 左側青色欄 */
+/* 左側欄：深灰色底 (參考圖片 7) */
 .sidebar {
-    width: 280px;
-    background-color: #e8f3f3; /* 淺青色底 */
+    width: 300px;
+    background-color: #5d5d5d; /* 深灰色 */
+    color: white;
     padding: 40px 25px;
 }
 
-/* 照片大小控制 */
+/* 照片大小縮小控制 */
 .profile-img {
-    width: 180px; /* 固定照片寬度 */
-    height: 220px; /* 固定照片高度 */
-    object-fit: cover; /* 確保照片不變形 */
-    border: 5px solid white;
+    width: 180px; /* 照片寬度縮小到 180 像素 */
+    height: 180px; /* 照片高度 */
+    object-fit: cover; /* 確保照片不會被壓扁或拉長 */
     display: block;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 40px auto; /* 置中並空出下方距離 */
+    border: 3px solid #fff;
 }
 
-.section {
-    margin-bottom: 30px;
-}
-
+/* 左側文字排版 */
 .section h3 {
-    background-color: #5aaeb3; /* 青色標題塊 */
-    color: white;
-    padding: 5px 15px;
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 5px;
+    font-size: 18px;
+    margin-top: 30px;
 }
 
 .section p {
     font-size: 14px;
-    color: #444;
     line-height: 1.8;
-    margin: 5px 0;
+    color: #e0e0e0;
 }
 
-/* 右側主要內容 */
+/* 右側主要內容欄：白色底 */
 .main-content {
-    flex: 1;
-    padding: 50px 40px;
+    flex: 1; /* 自動填滿剩餘空間 */
+    padding: 60px 50px;
+    background-color: white;
 }
 
+/* 名字排版 */
 header h1 {
-    font-size: 36px;
-    color: #333;
+    font-size: 45px;
     margin: 0;
-    letter-spacing: 5px;
+    color: #333;
+    letter-spacing: 4px;
 }
 
 .subtitle {
-    color: #666;
+    color: #777;
     font-size: 18px;
     margin-top: 10px;
 }
 
+/* 右側標題橫線 */
 .title-bar {
-    border-bottom: 2px solid #5aaeb3;
-    color: #5aaeb3;
+    border-bottom: 2px solid #5d5d5d;
+    color: #333;
     padding-bottom: 5px;
     margin-top: 40px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
-.item-content {
-    margin: 15px 0;
+/* 學經歷文字排版 */
+section p {
     font-size: 15px;
-    line-height: 1.6;
+
+    line-height: 2;
+    color: #444;
 }
