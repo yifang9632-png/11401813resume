@@ -1,27 +1,22 @@
-/* 讓背景填滿整個畫面 */
 body {
     background-color: #f5f5f5;
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     font-family: "Microsoft JhengHei", sans-serif;
-    min-height: 100vh;
 }
 
-/* 這是關鍵：把寬度直接設為 100%，或更大的固定寬度 */
 .resume-container {
-    width: 100%;             /* 讓它填滿畫面 */
-    max-width: 1200px;       /* 但最大不要超過 1200px，以免字拉得太長難看 */
+    width: 900px;
     background: white;
     display: flex;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    margin: 20px;            /* 讓四周留一點點小縫隙比較美 */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    min-height: 1000px;
 }
 
-/* 左側欄：保持固定 300px，不被壓縮 */
 .sidebar {
-    width: 300px;
+    width: 280px;
     background-color: #5d5d5d;
     color: white;
     padding: 40px 25px;
@@ -34,40 +29,55 @@ body {
     object-fit: cover;
     display: block;
     margin: 0 auto 30px auto;
-    border: 3px solid white;
+    border: 2px solid white;
 }
 
-/* 右側內容：強制填滿剩下空間 */
+.sidebar .section h3 {
+    font-size: 18px;
+    border-bottom: 1px solid #888;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.sidebar .section p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
 .main-content {
-    flex-grow: 1;            /* 強力填滿右側 */
-    padding: 60px 50px;
+    flex: 1;
+    padding: 60px 45px;
     background-color: #fff;
-}
-
-/* 確保所有標題橫線也拉長 */
-.title-bar {
-    border-bottom: 2px solid #5d5d5d;
-    margin-top: 40px;
-    padding-bottom: 10px;
-    font-size: 22px;
-    width: 100%;             /* 讓橫線跑滿整個右側 */
+    text-align: left;
 }
 
 header h1 {
     font-size: 45px;
     margin: 0;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.title-bar {
+    font-size: 20px;
+    border-bottom: 2px solid #5d5d5d;
+    margin-top: 40px;
+    padding-bottom: 5px;
+    display: block;
+    font-weight: bold;
 }
 
 section p {
-    font-size: 16px;
-    line-height: 2;
-    color: #444;
-    word-wrap: break-word;   /* 自動換行 */
-}
-
-.music-control {
-    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    margin-top: 15px;
 }
 
 #playBtn {
@@ -77,5 +87,5 @@ section p {
     color: white;
     border: 1px solid white;
     cursor: pointer;
-    border-radius: 5px;
+    margin-top: 20px;
 }
