@@ -1,102 +1,78 @@
-/* 讓整個網頁置中，背景帶一點淺灰色 */
+/* 全局設定 */
 body {
     background-color: #f5f5f5;
     margin: 0;
-    padding: 30px 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     font-family: "Microsoft JhengHei", sans-serif;
 }
 
-/* 這是外層容器，開啟 flex 讓它變左右兩欄 */
+/* 讓容器寬度稍微加大，並確保它是滿的 */
 .resume-container {
-    width: 900px;
+    width: 1000px; /* 增加總寬度 */
     background: white;
-    display: flex; /* 關鍵：讓左側 sidebar 和右側 main-content 並排 */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    min-height: 1000px;
+    display: flex;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    min-height: 100vh;
 }
 
-/* 左側欄：深灰色底 (參考圖片 7) */
+/* 左側欄位固定寬度 */
 .sidebar {
     width: 300px;
-    background-color: #5d5d5d; /* 深灰色 */
+    background-color: #5d5d5d;
     color: white;
     padding: 40px 25px;
+    flex-shrink: 0; /* 防止左邊被壓縮 */
 }
 
-/* 照片大小縮小控制 */
 .profile-img {
-    width: 180px; /* 照片寬度縮小到 180 像素 */
-    height: 180px; /* 照片高度 */
-    object-fit: cover; /* 確保照片不會被壓扁或拉長 */
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
     display: block;
-    margin: 0 auto 40px auto; /* 置中並空出下方距離 */
-    border: 3px solid #fff;
+    margin: 0 auto 30px auto;
+    border: 3px solid white;
 }
 
-/* 左側文字排版 */
-.section h3 {
-    border-bottom: 1px solid #999;
-    padding-bottom: 5px;
-    font-size: 18px;
-    margin-top: 30px;
-}
-
-.section p {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #e0e0e0;
-}
-
-/* 右側主要內容欄：白色底 */
+/* 右側內容：這是關鍵修正 */
 .main-content {
-    flex: 1; /* 自動填滿剩餘空間 */
+    flex: 1; /* 這行會讓右邊自動填滿剩下的所有空間 */
     padding: 60px 50px;
-    background-color: white;
+    background-color: #fff;
+    text-align: left; /* 確保文字靠左對齊 */
 }
 
-/* 名字排版 */
 header h1 {
-    font-size: 45px;
+    font-size: 40px;
     margin: 0;
-    color: #333;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 }
 
-.subtitle {
-    color: #777;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-/* 右側標題橫線 */
 .title-bar {
     border-bottom: 2px solid #5d5d5d;
-    color: #333;
-    padding-bottom: 5px;
     margin-top: 40px;
+    padding-bottom: 10px;
     font-size: 22px;
 }
 
-/* 學經歷文字排版 */
+/* 讓列表或段落內容稍微變寬 */
 section p {
-    font-size: 15px;
-
-    line-height: 2;
-    color: #444;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 100%; /* 確保內容不會被限制在窄框框裡 */
 }
+
+/* 音樂按鈕樣式 */
 .music-control {
     margin-top: 20px;
-    text-align: center;
 }
 
 #playBtn {
     width: 100%;
     padding: 10px;
-    background-color: #5d5d5d; /* 跟左邊一樣的深灰色 */
+    background-color: #444;
     color: white;
     border: 1px solid white;
-    border-radius: 5px;
     cursor: pointer;
 }
