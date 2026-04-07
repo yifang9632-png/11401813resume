@@ -25,6 +25,11 @@
                 <h3>聯繫方式</h3>
                 <p>信箱：yifang9632@gmail.com</p>
             </div>
+           <div class="music-control">
+            <button id="playBtn">🎵 播放背景音樂</button>
+        </div>
+    </div>
+</div>
         </div>
 
         <div class="main-content">
@@ -52,11 +57,19 @@
     </div>
 
     <script>
-        // 嘗試自動播放音樂（部分瀏覽器會攔截，需使用者點擊網頁後啟動）
-        window.addEventListener('click', () => {
-            const audio = document.getElementById('bgMusic');
+    const audio = document.getElementById('bgMusic');
+    const btn = document.getElementById('playBtn');
+
+    // 點擊按鈕切換播放與暫停
+    btn.addEventListener('click', function() {
+        if (audio.paused) {
             audio.play();
-        }, { once: true });
-    </script>
+            btn.innerText = "⏸ 暫停音樂";
+        } else {
+            audio.pause();
+            btn.innerText = "🎵 播放背景音樂";
+        }
+    });
+</script>
 </body>
 </html>
